@@ -21,8 +21,8 @@ All the snippets are independent from each other, you can pick only what you wan
 
 ### `horizontal-ribbon.css`
 
-> [!warning] This snippet could have unexpected side effects if the ribbon is disabled.
-> I will support this scenario in the future.
+> [!WARNING] 
+> This snippet could have unexpected side effects if the ribbon is disabled. I will support this scenario in the future.
 
 - Make the vertical ribbon horizontal. 
 - Removed vault selection.
