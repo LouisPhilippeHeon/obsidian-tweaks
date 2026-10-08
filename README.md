@@ -15,9 +15,9 @@ All the snippets are independent from each other, you can pick only what you wan
 ### `display-tags-under-title.css`
 
 | Before                       | After                                                  |
-| ---------------------------- | ------------------------------------------------------ |
-| ![[img/desktop_tags_before.png]] | ![[img/desktop_tags_after.png]]                            |
-| ![[img/mobile_tags_before.jpeg]] | ![[img/mobile_tags_after.jpeg]] |
+| :--------------------------: | :----------------------------------------------------: |
+| ![](img/desktop_tags_before.png) | ![](img/desktop_tags_after.png)                            |
+| ![](img/mobile_tags_before.jpeg) | ![](img/mobile_tags_after.jpeg) |
 
 ### `horizontal-ribbon.css`
 
@@ -28,17 +28,17 @@ All the snippets are independent from each other, you can pick only what you wan
 - Removed vault selection.
 
 | Before                 | After                                              |
-| ---------------------- | -------------------------------------------------- |
-| ![[img/ribbon_before.png]] | ![[img/ribbon_after.png]] |
+| :--------------------: | :------------------------------------------------: |
+| ![](img/ribbon_before.png) | ![](img/ribbon_after.png) |
 
 ### `translucent-headers.css`
 
 - Add translucency effects on headers.
 
 | Before                      | After                      |
-| --------------------------- | -------------------------- |
-| ![[img/main_header_before.png]] | ![[img/main_header_after.png]] |
-| ![[img/side_header_before.png]] | ![[img/side_header_after.png]] |
+| :-------------------------: | :------------------------: |
+| ![](img/main_header_before.png) | ![](img/main_header_after.png) |
+| ![](img/side_header_before.png) | ![](img/side_header_after.png) |
 
 ### `css-classes.css`
 
@@ -63,8 +63,8 @@ Changes impacting text styles.
 - If possible, in PDF files, keep titles on the same page as the content that follows it.
 
 | Before               | After                                              |
-| -------------------- | -------------------------------------------------- |
-| ![[img/text_before.png]] | ![[img/text_after.png]] |
+| :--------------------: | :--------------------------------------------------: |
+| ![](img/text_before.png) | ![](img/text_after.png) |
 ### `code-blocks.css`
 
 Many subtle adjustments to code style. 
@@ -74,10 +74,10 @@ Many subtle adjustments to code style.
 
 |                        Before                        |                        After                        |
 | :--------------------------------------------------: | :-------------------------------------------------: |
-|   Live preview:<br>![[img/code_table_live_before.png]]   |   Live preview:<br>![[img/code_table_live_after.png]]   |
-| Reading mode:<br>![[img/code_table_reading_before.png]]  | Reading mode:<br>![[img/code_table_reading_after.png]]  |
-|  Live preview:<br>![[img/code_inline_live_before.png]]   |  Live preview:<br>![[img/code_inline_live_after.png]]   |
-| Reading mode:<br>![[img/code_inline_reading_before.png]] | Reading mode:<br>![[img/code_inline_reading_after.png]] |
+|   Live preview:<br>![](img/code_table_live_before.png)   |   Live preview:<br>![](img/code_table_live_after.png)   |
+| Reading mode:<br>![](img/code_table_reading_before.png)  | Reading mode:<br>![](img/code_table_reading_after.png)  |
+|  Live preview:<br>![](img/code_inline_live_before.png)   |  Live preview:<br>![](img/code_inline_live_after.png)   |
+| Reading mode:<br>![](img/code_inline_reading_before.png) | Reading mode:<br>![](img/code_inline_reading_after.png) |
 ### `image-caption.css`
 
 Add captions to your images. Supports horizontal alignment (left: `ha-l`, center: `ha-c`, right: `ha-r`).
@@ -86,11 +86,11 @@ Add captions to your images. Supports horizontal alignment (left: `ha-l`, center
 Look, this image has a caption!
 
 > [!caption|ha-c] 
-> ![[img/demo-image-horizontal.jpg|300]]
+> ![](img/demo-image-horizontal.jpg|300]]
 > Caption
 ```
 
-![[img/image_caption.png]]
+![](img/image_caption.png)
 
 ### `misc.css`
 
@@ -103,8 +103,8 @@ All the rules that had no place in the other files.
 
 |           Before            |                       After                        |
 | :-------------------------: | :------------------------------------------------: |
-|  ![[img/misc_menu_before.png]]  |              ![[img/misc_menu_after.png]]              |
-| ![[img/misc_header_before.png]] | ![[img/misc_header_after.png]] |
+|  ![](img/misc_menu_before.png)  |              ![](img/misc_menu_after.png)              |
+| ![](img/misc_header_before.png) | ![](img/misc_header_after.png) |
 
 ### `mobile-fixes.css`
 
@@ -115,9 +115,9 @@ This snippet is for pretty much everything that annoyed me on mobile.
 - Fixes Kanban.
 
 | Before                        | After                                                  |
-| ----------------------------- | ------------------------------------------------------ |
-| ![[img/mobile_drawer_before.png]] | ![[img/mobile_drawer_after.png]]                           |
-| ![[img/mobile_kanban_before.png]] | ![[img/mobile_kanban_after.png]]<br> |
+| :-----------------------------: | :------------------------------------------------------: |
+| ![](img/mobile_drawer_before.png) | ![](img/mobile_drawer_after.png)                           |
+| ![](img/mobile_kanban_before.png) | ![](img/mobile_kanban_after.png)<br> |
 
 ### `status-bar.css`
 
@@ -127,8 +127,8 @@ This one is opinionated and will likely break unless you use the same plugins as
 - Hide the status bar if it's not hovered.
 
 | Before                     | After                                              |
-| -------------------------- | -------------------------------------------------- |
-| ![[img/status_bar_before.png]] | ![[img/status_bar_after.png]] |
+| :------------------------: | :------------------------------------------------: |
+| ![](img/status_bar_before.png) | ![](img/status_bar_after.png) |
 
 ### Plugin/theme patches
 These snippets depend on plugins/themes and will do nothing if used alone.
@@ -137,8 +137,8 @@ These snippets depend on plugins/themes and will do nothing if used alone.
 Re-styles the floating menu, especially the "glass" style.
 
 | Before                | After                                              |
-| --------------------- | -------------------------------------------------- |
-| ![[img/cmenu_before.png]] | ![[img/cmenu_after.png]] |
+| :-------------------: | :------------------------------------------------: |
+| ![](img/cmenu_before.png) | ![](img/cmenu_after.png) |
 
 #### `MCL-edit.css` (requires [Modular CSS Layout](https://efemkay.github.io/obsidian-modular-css-layout/multi-column/))
 
@@ -154,12 +154,12 @@ MCL empowers user to create layouts using flexbox with cleverly crafted callouts
 >>> [!NOTE] Lorem ipsum
 >>> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 >>
->> ![[img/demo-image-horizontal.jpg]]
+>> ![](img/demo-image-horizontal.jpg]]
 >
 >> [!blank-container|no-margin|va-c|wide-4]
 >> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 >> 
->> ![[img/demo-image-vertical.jpg]]
+>> ![](img/demo-image-vertical.jpg]]
 >> 
 >> ```css
 >> .workspace-ribbon {
@@ -182,13 +182,13 @@ MCL empowers user to create layouts using flexbox with cleverly crafted callouts
 >>void (*function)(void);
 >>```
 >> 
->>![[img/demo-image-horizontal.jpg]]
+>>![](img/demo-image-horizontal.jpg]]
 ```
 
 |                  Before                  |                                After                                |
 | :--------------------------------------: | :-----------------------------------------------------------------: |
-|           ![[img/mcl_before.png]]            |                         ![[img/mcl_after.png]]                          |
-| Exported PDF:<br>![[img/mcl_pdf_before.png]] | Exported PDF:<br>![[img/mcl_pdf_after.png]] |
+|           ![](img/mcl_before.png)            |                         ![](img/mcl_after.png)                          |
+| Exported PDF:<br>![](img/mcl_pdf_before.png) | Exported PDF:<br>![](img/mcl_pdf_after.png) |
 #### `GitHub-Theme-edit.css` (requires [GitHub theme](https://community.obsidian.md/themes/github-theme))
 
 Overrides changes made by the GitHub theme that I disagree with and fixes bugs.
@@ -198,8 +198,8 @@ Overrides changes made by the GitHub theme that I disagree with and fixes bugs.
 - Resize handles are no longer displayed in the title bar.
 
 | Before                       | After                       |
-| ---------------------------- | --------------------------- |
-| ![[img/github_theme_before.png]] | ![[img/github_theme_after.png]] |
+| :--------------------------: | :-------------------------: |
+| ![](img/github_theme_before.png) | ![](img/github_theme_after.png) |
 
 #### `shiki-edit.css` (requires [Shiki Highlighter](https://community.obsidian.md/plugins/shiki-highlighter))
 
@@ -208,9 +208,9 @@ Overrides changes made by the GitHub theme that I disagree with and fixes bugs.
 - Fixes a bug where plain text files would be unreadable due to low contrast.
 
 | Before                      | After                      |
-| --------------------------- | -------------------------- |
-| ![[img/shiki_text_before.png]]  | ![[img/shiki_text_after.png]]  |
-| ![[img/shiki_block_before.png]] | ![[img/shiki_block_after.png]] |
+| :-------------------------: | :------------------------: |
+| ![](img/shiki_text_before.png)  | ![](img/shiki_text_after.png)  |
+| ![](img/shiki_block_before.png) | ![](img/shiki_block_after.png) |
 
 #### `PlantUML-edit.css` (requires [PlantUML](https://community.obsidian.md/plugins/obsidian-plantuml))
 
@@ -219,8 +219,8 @@ Overrides changes made by the GitHub theme that I disagree with and fixes bugs.
 - Apply border radius to diagrams.
 
 | Before                   | After                                              |
-| ------------------------ | -------------------------------------------------- |
-| ![[img/plantuml_before.png]] | ![[img/plantuml_after.png]] |
+| :----------------------: | :------------------------------------------------: |
+| ![](img/plantuml_before.png) | ![](img/plantuml_after.png) |
 
 ## Plugins
 ### `cmenu-reading-view-hider` (requires [cMenu](https://community.obsidian.md/plugins/cmenu-plugin))
