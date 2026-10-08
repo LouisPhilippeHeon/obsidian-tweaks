@@ -1,0 +1,35 @@
+.status-bar {
+	/* Padding must be 0 to avoid the status bar being visible when it's empty */
+	padding: 0 !important;
+	/* Place editor status at the end */
+	flex-direction: row-reverse;
+	opacity: 0;
+	border: none;
+	transition: opacity linear 0.1s;
+
+	.status-bar-item {
+		margin: 5px 0;
+	}
+
+	/* First item */
+	.plugin-word-count {
+		margin-left: 5px;
+	}
+
+	/* Last item */
+	.plugin-editor-status {
+		margin-right: 5px;
+	}
+
+	/* Hide stuff I don't want */
+	.plugin-backlink,
+	.plugin-cmenu-plugin,
+	.plugin-properties {
+		display: none;
+	}
+}
+
+/* Show on hover */
+.status-bar:hover {
+	opacity: 1;
+}

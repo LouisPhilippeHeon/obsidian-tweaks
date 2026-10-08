@@ -1,0 +1,141 @@
+/* Note opened in seperate window */
+body.mod-macos:not(.is-fullscreen) :not(.workspace-window) {
+	--frame-left-space: 76px;
+}
+
+/* Allow window drag */
+body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
+	-webkit-app-region: no-drag;
+}
+
+body:not(.is-mobile) {
+	--ribbon-height: calc(var(--icon-m) + var(--size-2-2) * 2 + var(--size-4-2) * 2 + var(--size-4-4));
+	--ribbon-width: 90%;
+	--horizontal-margin: calc((100% - var(--ribbon-width))/2);
+
+	.workspace {
+		display: grid;
+		position: relative;
+		align-items: stretch;
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: 1fr min-content;
+		grid-template-areas:
+			"files main right-menu"
+			"ribbon main right-menu";
+
+		.mod-left-split {
+			grid-area: files;
+
+			/* Make space for ribbon at bottom */
+			.nav-files-container {
+				padding-bottom: calc(var(--ribbon-height) + var(--size-4-3));
+			}
+
+			/* Hide vault and settings */
+			.workspace-sidedock-vault-profile {
+				display: none !important;
+			}
+		}
+
+		.workspace-ribbon {
+			grid-area: ribbon;
+			flex-direction: row;
+			justify-content: space-around;
+			border: var(--divider-width) solid var(--divider-color);
+			padding: var(--size-4-2) var(--size-4-4);
+			position: absolute;
+			bottom: 0;
+			margin: 0 var(--horizontal-margin) var(--size-4-4) var(--horizontal-margin);
+			width: var(--ribbon-width);
+			backdrop-filter: blur(var(--blur-radius-s));
+			background-color: rgb(from var(--background-primary) r g b / 65%);
+			border-radius: 32px;
+
+			.side-dock-actions {
+				width: 100%;
+				flex-direction: row;
+			}
+
+			.side-dock-settings {
+				display: none;
+			}
+		}
+
+		.workspace-ribbon::before {
+			display: none;
+		}
+
+		/* Left pane closed */
+		.workspace-ribbon.is-collapsed {
+			border: none;
+			background-color: transparent;
+			backdrop-filter: none;
+
+			.side-dock-actions {
+				overflow: hidden;
+			}
+		}
+
+		.mod-root {
+			grid-area: main;
+		}
+
+		.mod-right-split {
+			grid-area: right-menu;
+		}
+	}
+
+	.mod-sidedock .graph-controls {
+		max-height: calc(100% - var(--ribbon-height) - var(--size-4-3) * 2);
+	}
+}
+
+body.mod-macos.is-fullscreen {
+	.mod-left-split>.mod-top>.workspace-tab-header-container {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.workspace-ribbon.side-dock-ribbon.mod-left::before {
+		display: none;
+	}
+}
+
+/* Avoid that the hidden bar hijacks clicks on MacOS */
+.mod-macos .workspace-ribbon.is-collapsed {
+	pointer-events: none;
+}
+
+/* Place the toggle left bar the same way on Windows than on MacOS */
+.mod-windows {
+	.workspace-ribbon {
+		/* The toggle button is overflowing from the ribbon */
+		overflow: visible;
+
+		.sidebar-toggle-button {
+			top: unset;
+			left: unset;
+			/* To place the button on the right of the left pane, we compensate for the padding. */
+			right: calc(-1 * var(--horizontal-margin));
+			bottom: calc(100vh - 3.5rem);
+		}
+	}
+
+	.workspace-ribbon.is-collapsed>.sidebar-toggle-button {
+		top: unset;
+		/* To place the button on the right of the left pane, we compensate for the padding. */
+		left: calc(-1 * var(--horizontal-margin) + var(--size-4-2));
+		bottom: calc(100vh - 3.5rem);
+	}
+}
+
+.mod-windows:not(.is-popout-window) {
+
+	.workspace-tabs.mod-top-left-space:not(.mod-top-right-space) .workspace-tab-header-spacer {
+		margin-right: var(--ribbon-width);
+	}
+
+	.mod-root .workspace-tabs.mod-top-left-space .workspace-tab-header-container-inner {
+		margin-left: var(--ribbon-width);
+	}
+}

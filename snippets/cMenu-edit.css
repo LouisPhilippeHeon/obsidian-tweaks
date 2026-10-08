@@ -1,0 +1,34 @@
+#cMenuModalBar {
+	margin-left: auto;
+	margin-right: auto;
+	left: 0 !important;
+	right: 0;
+	width: fit-content;
+	border-radius: 32px;
+	padding: var(--size-4-2) var(--size-4-3);
+	max-width: 90%;
+	min-width: unset;
+	overflow-x: auto;
+
+	.codeblock-glyph path {
+		fill: currentColor;
+	}
+}
+
+.cMenuGlassAesthetic {
+	background: rgb(from var(--background-secondary) r g b / 75%);
+	box-shadow: 0 var(--size-4-1) var(--size-4-6) rgb(from var(--background-primary) r g b / 80%) !important;
+	backdrop-filter: blur(6px);
+	border: var(--divider-width) solid var(--divider-color);
+
+	.cMenuCommandItem {
+		background-color: transparent !important;
+		transition: background var(--anim-duration-fast) linear;
+		border-radius: 12px !important;
+		padding: var(--size-4-2) !important;
+	}
+
+	.cMenuCommandItem:hover {
+		background: var(--background-modifier-hover) !important;
+	}
+}

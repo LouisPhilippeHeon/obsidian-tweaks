@@ -4,7 +4,7 @@ These snippets and plugins were made for my personal use, not to appeal to a lar
 
 Screenshots provided in the README.md could be out of date.
 
-## Themes
+## Snippets
 
 I used CSS variables and avoided hard-coding as much as possible, therefore it should work fine with most themes and plugins, but if that's not the case, open an issue. I won't try to support everything out there, but I will take a look.
 

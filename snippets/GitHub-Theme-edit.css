@@ -1,0 +1,26 @@
+.obsidian-app {
+	--link-decoration: underline;
+}
+
+.theme-dark {
+	--color-orange: #f9b172;
+	--color-yellow: #ffc956;
+	--code-normal: color-mix(in srgb, var(--text-normal) 100%, color-mix(in srgb, var(--color-accent) 20%, black 80%) 20%);
+	--code-background: color-mix(in srgb, var(--background-primary-alt) 100%, color-mix(in srgb, var(--color-accent) 20%, white 7%) 20%);
+}
+
+/* Focused window titlebar bug */
+body.is-focused {
+	--titlebar-background: var(--titlebar-background-focused);
+}
+
+/* Resize handles won't be in the title bar */
+.workspace-split.mod-horizontal>.workspace-leaf-resize-handle,
+.mod-vertical>.workspace-tabs>.workspace-leaf-resize-handle {
+	height: calc(100vh - var(--header-height)) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even),
+thead {
+	background-color: color-mix(in srgb, var(--background-primary) 30%, var(--background-primary-alt) 60%);
+}

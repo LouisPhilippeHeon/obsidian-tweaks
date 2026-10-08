@@ -1,0 +1,33 @@
+/* BUGFIXES */
+
+/* Fix uneven padding on callouts */
+.callout-content>:last-child {
+	margin-bottom: 0;
+}
+
+/* CUSTOMIZATIONS */
+
+/* Allocate more space to left panel in settings */
+.mod-settings .vertical-tab-header {
+	max-width: 280px !important;
+}
+
+/* Hide tab bar menu */
+.workspace-tab-header-tab-list {
+	display: none !important;
+}
+
+/* Hide mode switcher */
+.workspace-leaf-content[data-type="markdown"] .view-action:first-child:not(:last-child) {
+	display: none;
+}
+
+/* Use default cursor everywhere */
+button {
+	cursor: default !important;
+}
+
+/* Panes icons take the entire width */
+.nav-buttons-container {
+	justify-content: space-around;
+}

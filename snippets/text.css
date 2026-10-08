@@ -1,0 +1,76 @@
+.obsidian-app {
+	--inline-title-size: 2.3em;
+	--h1-color: inherit;
+	--h2-color: var(--color-green);
+	--h3-color: var(--color-orange);
+	--h4-color: var(--color-yellow);
+	--h5-color: var(--color-pink);
+	--h6-color: var(--color-purple);
+	--h6-size: 1.05em;
+	--bold-color: var(--color-red);
+	--file-line-width: 850px;
+}
+
+/* Inline items (code, bold, links) will have the same color as the parent (headings, bold, link) */
+.cm-header,
+:is(h1, h2, h3, h4, h5, h6) code,
+:is(h1, h2, h3, h4, h5, h6) strong,
+strong code,
+.external-link>code {
+	color: inherit !important;
+}
+
+/* Bold inline code blocks */
+.cm-inline-code.cm-strong:not(.cm-header) {
+	color: var(--bold-color) !important;
+}
+
+/* Add border radius effect to the background color of highlighted text */
+mark,
+.cm-highlight {
+	border-radius: 3px;
+	box-decoration-break: clone;
+}
+
+/* Center title */
+.inline-title {
+	text-align: center;
+}
+
+@media print {
+
+	/* Required for Better Export PDF */
+	h2 {
+		color: var(--color-green) !important;
+	}
+
+	/* Required for Better Export PDF */
+	h3 {
+		color: var(--color-orange) !important;
+	}
+
+	/* Required for Better Export PDF */
+	h4 {
+		color: var(--color-yellow) !important;
+	}
+
+	/* Required for Better Export PDF */
+	h5 {
+		color: var(--color-pink) !important;
+	}
+
+	/* Required for Better Export PDF */
+	h6 {
+		color: var(--color-purple) !important;
+	}
+
+	/* Avoid page break after a heading in PDF files, the heading will move to the next page to stay with the content. */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+}

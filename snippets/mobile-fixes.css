@@ -1,0 +1,87 @@
+body.is-mobile {
+	/* Drawer */
+	.mod-left .workspace-drawer-inner {
+		padding-top: 0;
+
+		.workspace-leaf-content {
+			.nav-header {
+				padding-top: 0;
+			}
+
+			.nav-header~.node-insert-event {
+				padding-top: 0 !important;
+			}
+
+			/* Fade effect */
+			.nav-header~.node-insert-event:before {
+				display: block;
+				position: sticky;
+				content: "";
+				height: max(var(--size-4-2), var(--safe-area-inset-top));
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: linear-gradient(to top, transparent, var(--mobile-sidebar-background));
+				z-index: 1;
+			}
+
+			.search-row {
+				padding-top: max(var(--size-4-2), var(--safe-area-inset-top));
+			}
+		}
+
+		/* View selector for drawer view */
+		.workspace-drawer-tab-options {
+			width: calc(100% - var(--touch-size-m) - var(--size-4-4) - var(--size-4-3) * 2);
+
+			.workspace-drawer-tab-select {
+				height: var(--touch-size-m);
+				container-type: inline-size;
+
+				.workspace-tab-header-inner-title {
+					font-size: min(5cqw, var(--font-ui-medium));
+				}
+			}
+		}
+
+		/* Workspace selector */
+		.workspace-drawer-header {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			padding-bottom: calc(max(var(--safe-area-inset-bottom), var(--size-4-4)) - var(--keyboard-height));
+
+			.workspace-drawer-header-left {
+				display: none;
+			}
+		}
+	}
+
+	.menu-scroll {
+		border-radius: var(--touch-radius-xxs) var(--touch-radius-xxs) 0 0;
+		margin: var(--menu-padding);
+		margin-bottom: 0;
+		padding: 0 0 var(--safe-area-inset-bottom) 0;
+	}
+
+	.kanban-plugin__item,
+	.kanban-plugin__item-input-wrapper {
+		border-radius: var(--touch-radius-xxs);
+
+		/* Bug where padding would be way too big */
+		.cm-scroller {
+			padding-top: unset !important;
+		}
+	}
+
+	.kanban-plugin__item-title-wrapper,
+	.kanban-plugin__item-input-wrapper {
+		padding: var(--size-4-3);
+	}
+}
+
+/* Don't ask about this one... */
+body.is-mobile:not(.emulate-mobile) .nav-files-container>div>.nav-folder>.tree-item-self[data-path^="᠎"] {
+	text-indent: -8px;
+}

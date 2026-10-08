@@ -1,0 +1,48 @@
+.obsidian-app {
+	--inline-code-background: var(--code-background);
+}
+
+.markdown-rendered,
+.markdown-preview-view {
+
+	/* Apply same style as live preview */
+	:not(pre)>code {
+		padding: 0.15em 0.3em;
+		border-radius: var(--code-radius);
+		color: var(--code-normal);
+	}
+
+	/* In tables */
+	td,
+	.cm-s-obsidian {
+
+		/* Reduce padding even more in tables and increase contrast */
+		code,
+		.cm-inline-code {
+			padding: 0.5px 2px !important;
+		}
+
+		/* ` At the start of the code block */
+		.cm-formatting:has(+ .cm-inline-code) {
+			padding: 1px 0 1px 2px !important;
+		}
+
+		/* ` At the end of the code block */
+		.cm-inline-code+.cm-formatting {
+			padding: 1px 2px 1px 0 !important;
+		}
+	}
+}
+
+.markdown-source-view {
+
+	/* Avoid lines break after inline code blocks */
+	:not(.HyperMD-codeblock)>img.cm-widgetBuffer {
+		display: none !important;
+	}
+
+	/* Avoid bugs on list items starting with code */
+	.cm-line.HyperMD-list-line .cm-formatting+img.cm-widgetBuffer {
+		display: inline !important;
+	}
+}

@@ -1,0 +1,54 @@
+.workspace-leaf-content[data-type="markdown"] .metadata-container {
+	padding: 0;
+	margin-block-end: 1rem;
+	transform: none;
+
+	.metadata-properties-heading,
+	.metadata-add-button,
+	.metadata-property:not([data-property-key="tags"]) {
+		display: none;
+	}
+
+	.metadata-content {
+		display: block !important;
+
+		.metadata-property[data-property-key="tags"] {
+			display: block;
+
+			.metadata-property-key {
+				display: none;
+			}
+
+			.metadata-property-value {
+				border-bottom: none;
+				padding-inline-start: 0;
+
+				.multi-select-container {
+					justify-content: center;
+
+					.multi-select-input {
+						display: none;
+					}
+				}
+
+				.multi-select-container:focus-within>.multi-select-input {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/* Hide properties in file previews */
+.popover .metadata-container {
+	display: none !important;
+}
+
+/* On mobile, remove background color for properties */
+.is-mobile .metadata-content {
+	background-color: unset !important;
+}
+
+.multi-select-pill {
+	cursor: default !important;
+}

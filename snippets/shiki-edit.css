@@ -1,0 +1,32 @@
+.obsidian-app {
+	--shiki-code-normal: var(--code-normal);
+}
+
+/* Shiki code blocks have the same padding as native code blocks in preview mode */
+.markdown-source-view .expressive-code {
+	code {
+		padding: 0;
+	}
+
+	code::before,
+	code::after {
+		content: " ";
+	}
+}
+
+.expressive-code {
+
+	/* Remove padding at the end for the copy button */
+	:nth-child(1 of .ec-line) .code {
+		padding-inline-end: unset;
+	}
+
+	/* Fix a bug where plain text files could have low contrast */
+	[data-language="text"],
+	[data-language="txt"],
+	[data-language="plain"] {
+		.code>span {
+			color: var(--shiki-code-normal);
+		}
+	}
+}

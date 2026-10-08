@@ -1,0 +1,9 @@
+{
+  "id": "cmenu-reading-view-hider",
+  "name": "cMenu Reading View Hider",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Hides the cMenu toolbar when the active note is in reading view.",
+  "author": "Louis-Philippe Héon",
+  "isDesktopOnly": true
+}

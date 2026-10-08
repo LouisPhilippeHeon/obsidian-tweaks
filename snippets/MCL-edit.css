@@ -1,0 +1,65 @@
+div[data-callout="multi-column"] {
+	div[data-callout-metadata*="va-t"] {
+		justify-content: start;
+	}
+
+	div[data-callout-metadata*="va-c"] {
+		justify-content: center;
+	}
+
+	div[data-callout-metadata*="va-b"] {
+		justify-content: end;
+	}
+
+	.callout-content {
+		--callout-column-margin: calc(var(--callout-gap)/(3/2));
+
+		img {
+			border-radius: var(--image-radius);
+			display: block;
+		}
+	}
+}
+
+div[data-callout="multi-column"]>.callout-content>div>.callout-content>*:not(:first-child) {
+	margin-block-start: 0 !important;
+}
+
+div[data-callout="multi-column"]>.callout-content>div>.callout-content>*:first-child {
+	margin-block-start: var(--callout-column-margin) !important;
+}
+
+div[data-callout="multi-column"]>.callout-content>div>.callout-content>* {
+	margin-block-end: var(--callout-column-margin) !important;
+}
+
+@media print {
+
+	/* Restore gap */
+	[data-callout="multi-column"]>.callout-content {
+		gap: var(--callout-gap);
+	}
+
+	/* If possible, keep the entire thing on the same page */
+	[data-callout="multi-column"] {
+		break-inside: avoid;
+
+		/* Fix bug in PDF rendering */
+		div[data-callout*="blank"]>.callout-content {
+			display: flex !important;
+			flex-direction: column;
+		}
+
+		div[data-callout-metadata*="va-t"] {
+			margin-bottom: auto !important;
+		}
+
+		div[data-callout-metadata*="va-c"] {
+			margin: auto !important;
+		}
+
+		div[data-callout-metadata*="va-b"] {
+			margin-top: auto !important;
+		}
+	}
+}

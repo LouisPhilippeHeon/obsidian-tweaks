@@ -1,0 +1,57 @@
+.hide-todos [data-callout="todo"] {
+	display: none;
+}
+
+@media print {
+	.pdf-h1-page-breaks {
+		h1 {
+			break-before: page;
+		}
+
+		.mod-frontmatter+div>h1 {
+			break-before: unset;
+		}
+	}
+
+	.pdf-h2-page-breaks {
+		h2 {
+			break-before: page;
+		}
+
+		.mod-frontmatter+div>h2 {
+			break-before: unset;
+		}
+	}
+
+	.hide-todos>div:has([data-callout="todo"]) {
+		display: none;
+	}
+
+	.pdf-compact-tables {
+		table {
+			width: 100% !important;
+			max-width: 100% !important;
+			table-layout: auto !important;
+			border-collapse: collapse !important;
+
+			th,
+			td {
+				hyphens: auto !important;
+				padding: 5px 6px !important;
+				font-size: 10pt !important;
+
+				code {
+					padding: 0.5px 1px !important;
+				}
+			}
+		}
+	}
+
+	/* TODO make it work with native code blocks */
+	.pdf-compact-code-blocks {
+		.expressive-code {
+			--ec-codeFontSize: calc(var(--font-text-size) * 0.8) !important;
+			--ec-codeLineHt: calc(var(--line-height-normal) * 0.85) !important;
+		}
+	}
+}

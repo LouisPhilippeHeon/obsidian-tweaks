@@ -1,0 +1,92 @@
+/* Unfortunately no variable worked so I hardcoded it based on observations */
+body.mod-macos {
+	--system-scrollbar-width: calc(16px / var(--zoom-factor));
+}
+
+body:not(.mod-macos) {
+	--system-scrollbar-width: calc(12px / var(--zoom-factor));
+}
+
+body:not(.is-mobile) {
+	--scrollbar-width: var(--system-scrollbar-width);
+
+	/* Apply mask and common style to headers */
+	.mod-root .workspace-leaf-content[data-type="markdown"]>.view-header,
+	.mod-root .workspace-leaf-content[data-type="graph"]>.view-header,
+	.nav-header {
+		/* Less transparency on the bottom, leaves the right side transparent to avoid covering scroll bars */
+		mask-image:
+			linear-gradient(to right, black calc(100% - var(--scrollbar-width)), transparent calc(100% - var(--scrollbar-width))),
+			linear-gradient(to bottom, black 90%, transparent);
+		mask-composite: intersect;
+		background-color: transparent !important;
+		position: absolute;
+		width: 100%;
+	}
+
+	/* Root view headers implementation */
+	.mod-root .workspace-leaf-content[data-type="markdown"],
+	.mod-root .workspace-leaf-content[data-type="graph"] {
+		.view-header {
+			backdrop-filter: blur(4px);
+			background-image: linear-gradient(to bottom, var(--background-primary) 19%, rgb(from var(--background-primary) r g b / 75%));
+		}
+
+		/* Graph settings */
+		.graph-controls {
+			margin-top: var(--header-height) !important;
+			max-height: calc(100% - var(--header-height) - var(--size-4-3) * 2);
+		}
+
+		/* Note */
+		.view-content>.markdown-source-view>.cm-editor>.cm-scroller,
+		.markdown-reading-view>.markdown-preview-view {
+			padding-top: calc(var(--header-height) + var(--file-margins)) !important;
+		}
+
+		/* Search in note should not cover headers */
+		.document-search-container {
+			margin-top: var(--header-height);
+		}
+	}
+
+	/* Side pane */
+	.workspace-leaf-content {
+		.nav-header {
+			backdrop-filter: blur(2px);
+			background-image: linear-gradient(to bottom, var(--background-secondary) 19%, rgb(from var(--background-secondary) r g b / 75%));
+			z-index: 1;
+		}
+
+		/* Avoids placing content behind the scrollbar */
+		.nav-header~div:last-child {
+			padding-left: var(--system-scrollbar-width) !important;
+			padding-right: var(--system-scrollbar-width) !important;
+		}
+
+		/* The only generic way I found to apply padding before the content (to prevent the header from covering it) */
+		.nav-header~div:last-child:before {
+			display: block;
+			content: "";
+			margin-top: var(--header-height);
+		}
+	}
+
+	/* Search in note opened in side pane */
+	.mod-sidedock .document-search-container {
+		margin: 0;
+	}
+
+	/* No scrollbar on graph view */
+	.workspace-leaf-content[data-type="graph"] {
+		--scrollbar-width: 0px;
+	}
+
+	/* All headers will have the same padding, even if they are not translucent */
+	.view-header,
+	.nav-header {
+		padding-left: max(var(--scrollbar-width), var(--system-scrollbar-width), var(--size-4-3));
+		padding-right: max(var(--scrollbar-width), var(--system-scrollbar-width), var(--size-4-3));
+		min-height: var(--header-height);
+	}
+}
