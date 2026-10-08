@@ -14,6 +14,8 @@ All the snippets are independent from each other, you can pick only what you wan
 
 ### `display-tags-under-title.css`
 
+Places the tags under the note's title. To edit other properties, use "Properties view" (core plugin).
+
 | Before                       | After                                                  |
 | :--------------------------: | :----------------------------------------------------: |
 | ![](img/desktop_tags_before.png) | ![](img/desktop_tags_after.png)                            |
