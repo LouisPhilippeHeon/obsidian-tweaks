@@ -7,6 +7,7 @@
 	--color-yellow: #ffc956;
 	--code-normal: color-mix(in srgb, var(--text-normal) 100%, color-mix(in srgb, var(--color-accent) 20%, black 80%) 20%);
 	--code-background: color-mix(in srgb, var(--background-primary-alt) 100%, color-mix(in srgb, var(--color-accent) 20%, white 7%) 20%);
+	--table-border-color: rgb(34, 37, 43);
 }
 
 /* Focused window titlebar bug */
@@ -22,5 +23,5 @@ body.is-focused {
 
 .markdown-rendered tbody tr:nth-child(even),
 thead {
-	background-color: color-mix(in srgb, var(--background-primary) 30%, var(--background-primary-alt) 60%);
+	background-color: color-mix(in srgb, var(--background-primary) 30%, var(--background-primary-alt) 50%);
 }
