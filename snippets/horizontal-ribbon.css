@@ -10,8 +10,8 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 
 body:not(.is-mobile) {
 	--ribbon-height: calc(var(--icon-m) + var(--size-2-2) * 2 + var(--size-4-2) * 2 + var(--size-4-4));
-	--ribbon-width: 90%;
-	--horizontal-margin: calc((100% - var(--ribbon-width))/2);
+	--horizontal-ribbon-width: 90%;
+	--horizontal-margin: calc((100% - var(--horizontal-ribbon-width))/2);
 
 	.workspace {
 		display: grid;
@@ -46,7 +46,7 @@ body:not(.is-mobile) {
 			position: absolute;
 			bottom: 0;
 			margin: 0 var(--horizontal-margin) var(--size-4-4) var(--horizontal-margin);
-			width: var(--ribbon-width);
+			width: var(--horizontal-ribbon-width);
 			backdrop-filter: blur(var(--blur-radius-s));
 			background-color: rgb(from var(--background-primary) r g b / 65%);
 			border-radius: 32px;
@@ -124,12 +124,18 @@ body.mod-macos.is-fullscreen {
 	.workspace-ribbon.is-collapsed>.sidebar-toggle-button {
 		top: unset;
 		/* To place the button on the right of the left pane, we compensate for the padding. */
-		left: calc(-1 * var(--horizontal-margin) + var(--size-4-2));
-		bottom: calc(100vh - 3.5rem);
+		left: calc(var(--horizontal-margin));
+	}
+
+	.mod-left-split>.mod-top>.workspace-tab-header-container>.workspace-tab-header-container-inner {
+		margin-left: var(--tab-container-padding-start);
 	}
 }
 
 .mod-windows:not(.is-popout-window) {
+	.mod-top-left-space .workspace-tab-header-container {
+		padding-left: 0 !important;
+	}
 
 	.workspace-tabs.mod-top-left-space:not(.mod-top-right-space) .workspace-tab-header-spacer {
 		margin-right: var(--ribbon-width);
