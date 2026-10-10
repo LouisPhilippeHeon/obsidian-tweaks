@@ -2,7 +2,8 @@
 
 /* Fix uneven padding on callouts */
 .callout-content>:last-child {
-	margin-bottom: 0;
+	/* In theory 0 would be good, but depending on scaling 1px margin is necessary to prevent overflow */
+	margin-bottom: 1px;
 }
 
 /* CUSTOMIZATIONS */
