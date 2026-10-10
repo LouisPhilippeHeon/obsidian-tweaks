@@ -41,7 +41,8 @@ body:not(.is-mobile) {
 		/* Note */
 		.view-content>.markdown-source-view>.cm-editor>.cm-scroller,
 		.markdown-reading-view>.markdown-preview-view {
-			padding-top: calc(var(--header-height) + var(--file-margins)) !important;
+			padding-top: calc(var(--header-height) + var(--file-margins-y)) !important;
+			/* padding-top: 0; */
 		}
 
 		/* Search in note should not cover headers */
