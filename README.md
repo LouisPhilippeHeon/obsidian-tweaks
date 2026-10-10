@@ -224,10 +224,41 @@ Overrides changes made by the GitHub theme that I disagree with and fixes bugs.
 | :----------------------: | :------------------------------------------------: |
 | ![](img/plantuml_before.png) | ![](img/plantuml_after.png) |
 
+#### `full-calendar-remastered-edit.css` (requires [Full Calendar Remastered](https://community.obsidian.md/plugins/full-calendar-remastered))
+
+This is by far the ugliest snippet for the bunch. This plugin was a nightmare to work with and I gave up making quality styles halfway there. But it works on my devices and the calendar is now usable on mobile so that's a win.
+
+- Removes calendar choice; I always use the same.
+- Removes reminders.
+- Make the event creation modal more consistent with the rest of the app.
+- Improve clarity of repeating options.
+- Improve mobile experience by making events more compact, best used with `full-calendar-remastered-tweaks`.
+	- The keyboard no longer overlaps the modal.
+	- Make options more compact.
+
+| Before                                              | After                                              |
+| --------------------------------------------------- | -------------------------------------------------- |
+| ![](img/desktop_calendar_before.png)                    | ![](img/desktop_calendar_after.png)                    |
+| ![](img/desktop_calendar_creation_before.png)           | ![](img/desktop_calendar_creation_after.png)           |
+| ![](img/desktop_calendar_creation_weekly_before.png)    | ![](img/desktop_calendar_creation_weekly_after.png)    |
+| ![](img/desktop_calendar_creation_montly_before.png)    | ![](img/desktop_calendar_creation_montly_after.png)    |
+| ![](img/mobile_calendar_7_days_before.png)              | ![](img/mobile_calendar_7_days_after.png)              |
+| ![](img/mobile_calendar_3_days_before.png)              | ![](img/mobile_calendar_3_days_after.png)              |
+| ![](img/mobile_calendar_creation_before.png)            | ![](img/mobile_calendar_creation_after.png)            |
+| ![](img/mobile_calendar_creation_keyboard_before.png)   | ![](img/mobile_calendar_creation_keyboard_after.png)   |
+| ![](img/mobile_calendar_creation_weekly_before.png.png) | ![](img/mobile_calendar_creation_weekly_after.png.png) |
+| ![](img/mobile_calendar_creation_montly_before.png)     | ![](img/mobile_calendar_creation_montly_after.png)     |
+
 ## Plugins
 ### `cmenu-reading-view-hider` (requires [cMenu](https://community.obsidian.md/plugins/cmenu-plugin))
 
 Automatically hides the cMenu bar when the selected note is in reading mode.
+
+### `full-calendar-remastered-tweaks` (requires [Full Calendar Remastered](https://community.obsidian.md/plugins/full-calendar-remastered))
+
+- On phones, restore the 7 days view option.
+- On mobile, disable dragging and resizing events (you can still create a new one by dragging). Prevents accidental modifications.
+- On mobile, absorb swipe events in the calendar, allowing to swipe to see previous and next without opening drawers.
 
 ### 🚧 Soon : `shiki-x-execute-code` (requires [Shiki Highlighter](https://community.obsidian.md/plugins/shiki-highlighter) and Execute Code)
 
