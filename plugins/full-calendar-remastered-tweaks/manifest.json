@@ -1,0 +1,9 @@
+{
+  "id": "full-calendar-remastered-tweaks",
+  "name": "Full Calendar Remastered Tweaks",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Tweaks to the plugin Full Calendar Remastered",
+  "author": "Louis-Philippe Héon",
+  "isDesktopOnly": false
+}
